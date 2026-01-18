@@ -6,8 +6,7 @@ A robust React application that displays artwork data from the **Art Institute o
 
 ## Links
 
-- **GitHub Repository:** [Link to your repository](https://github.com/your-username/your-repo)
-- **Live Demo:** [Link to deployed project](https://your-deployed-link.com)
+- **Live Demo:** [Live project](https://your-deployed-link.com)
 
 ---
 
@@ -76,5 +75,5 @@ This project uses the Art Institute of Chicago public API.
 **Endpoint:**
 
 ```http
-[https://api.artic.edu/api/v1/artworks?page=](https://api.artic.edu/api/v1/artworks?page=){page_number}
+(https://api.artic.edu/api/v1/artworks?page=1)
 ```
