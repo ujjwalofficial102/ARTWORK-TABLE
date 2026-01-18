@@ -77,3 +77,54 @@ This project uses the Art Institute of Chicago public API.
 ```http
 https://api.artic.edu/api/v1/artworks?page=1
 ```
+
+## Installation & Setup
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone [https://github.com/ujjwalofficial102/ARTWORK-TABLE.git](https://github.com/ujjwalofficial102/ARTWORK-TABLE.git)
+cd ARTWORK-TABLE
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:5173 to view it in the browser.
+
+## Project Structure
+
+```txt
+src/
+ ├── api/
+ │    └── artworksApi.ts          # API fetch logic
+ ├── components/
+ │    ├── ArtworksTable.tsx       # Main DataTable component
+ │    ├── CustomSelectOverlay.tsx # The 'Select Top N' overlay
+ │    └── PaginationBar.tsx       # Custom pagination logic
+ ├── types/
+ │    └── artworks.ts             # TypeScript interfaces
+ ├── utils/
+ │    └── text.ts                 # Text formatting utilities
+ └── App.tsx                      # Main application entry
+```
+
+## Author
+
+**Ujjwal Mishra**
+
+- **GitHub:** [ujjwalofficial102](https://github.com/ujjwalofficial102)
+- **LinkedIn:** [ujjwalmishra102](https://www.linkedin.com/in/ujjwalmishra102/)
