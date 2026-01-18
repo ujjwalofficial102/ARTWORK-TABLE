@@ -1,17 +1,17 @@
-# 🎨 Artworks DataTable (React + TypeScript + PrimeReact)
+# Artworks DataTable (React + TypeScript + PrimeReact)
 
 A robust React application that displays artwork data from the **Art Institute of Chicago API**. This project demonstrates the implementation of a **PrimeReact DataTable** with advanced features like server-side pagination, persistent row selection, and a custom overlay for selecting specific row counts.
 
 ---
 
-## 🔗 Links
+## Links
 
 - **GitHub Repository:** [Link to your repository](https://github.com/your-username/your-repo)
 - **Live Demo:** [Link to deployed project](https://your-deployed-link.com)
 
 ---
 
-## 🚀 Features
+## Features
 
 - **API Integration:** Fetches real-time artwork data from the Art Institute of Chicago.
 - **Server-Side Pagination:** Data is fetched efficiently page-by-page to handle large datasets.
@@ -32,7 +32,7 @@ A robust React application that displays artwork data from the **Art Institute o
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework:** React (Vite)
 - **Language:** TypeScript
@@ -41,7 +41,7 @@ A robust React application that displays artwork data from the **Art Institute o
 
 ---
 
-## 🧠 How It Works (Logic)
+## How It Works (Logic)
 
 ### 1. Checkbox Selection
 
@@ -69,7 +69,7 @@ Located next to the selection header, there is a custom dropdown icon.
 
 ---
 
-## 🌐 API Reference
+## API Reference
 
 This project uses the Art Institute of Chicago public API.
 
