@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# 🎨 Artworks DataTable (React + TypeScript + PrimeReact)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A robust React application that displays artwork data from the **Art Institute of Chicago API**. This project demonstrates the implementation of a **PrimeReact DataTable** with advanced features like server-side pagination, persistent row selection, and a custom overlay for selecting specific row counts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Links
 
-## React Compiler
+- **GitHub Repository:** [Link to your repository](https://github.com/your-username/your-repo)
+- **Live Demo:** [Link to deployed project](https://your-deployed-link.com)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **API Integration:** Fetches real-time artwork data from the Art Institute of Chicago.
+- **Server-Side Pagination:** Data is fetched efficiently page-by-page to handle large datasets.
+- **PrimeReact DataTable:** Displays key artwork details:
+  - Title
+  - Place of Origin
+  - Artist
+  - Inscriptions
+  - Start Date
+  - End Date
+- **Row Selection:**
+  - Individual row selection via checkboxes.
+  - "Select All" functionality for the current page.
+- **Custom Selection Overlay:**
+  - A custom input panel to select the first **N rows** of the current page.
+- **Smart Pagination UI:** Grouped pagination logic (e.g., 1–5, 6–10, 11–15).
+- **Loading States:** Visual feedback (spinners) while fetching data.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Framework:** React (Vite)
+- **Language:** TypeScript
+- **UI Library:** PrimeReact + PrimeIcons
+- **Styling:** CSS / PrimeFlex
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 How It Works (Logic)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Checkbox Selection
+
+- Users can select or deselect individual rows using the checkboxes in the first column.
+- Users can toggle the header checkbox to select/deselect all rows **on the current page**.
+
+### 2. Custom Row Selection (Overlay Panel)
+
+Located next to the selection header, there is a custom dropdown icon.
+
+1. Clicking the icon opens an overlay panel.
+2. The user enters a number (**N**).
+3. The app selects the **first N rows** from the **current page only**.
+
+> **Note:**
+>
+> - If **N** is greater than the available rows on the current page, it selects all available rows on that page.
+> - This feature does **not** fetch extra pages or perform prefetching.
+
+### 3. Server-Side Pagination
+
+- The application does not load all data at once.
+- When the user changes the page, a request is sent to the API for that specific page index.
+- A loading spinner is displayed during the fetch process.
+
+---
+
+## 🌐 API Reference
+
+This project uses the Art Institute of Chicago public API.
+
+**Endpoint:**
+
+```http
+[https://api.artic.edu/api/v1/artworks?page=](https://api.artic.edu/api/v1/artworks?page=){page_number}
 ```
