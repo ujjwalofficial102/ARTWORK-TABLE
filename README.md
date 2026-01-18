@@ -6,7 +6,7 @@ A robust React application that displays artwork data from the **Art Institute o
 
 ## Links
 
-- **Live Demo:** [Live project](https://your-deployed-link.com)
+- **Live Demo:** [Live project](https://storied-hummingbird-fe2c42.netlify.app/)
 
 ---
 
@@ -85,7 +85,8 @@ Follow these steps to run the project locally.
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/ujjwalofficial102/ARTWORK-TABLE.git](https://github.com/ujjwalofficial102/ARTWORK-TABLE.git)
+git clone https://github.com/ujjwalofficial102/ARTWORK-TABLE.git
+
 cd ARTWORK-TABLE
 ```
 
