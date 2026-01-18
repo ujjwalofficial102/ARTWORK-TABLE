@@ -75,5 +75,5 @@ This project uses the Art Institute of Chicago public API.
 **Endpoint:**
 
 ```http
-(https://api.artic.edu/api/v1/artworks?page=1)
+https://api.artic.edu/api/v1/artworks?page=1
 ```
